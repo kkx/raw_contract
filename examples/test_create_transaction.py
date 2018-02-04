@@ -9,6 +9,6 @@ contract = Contract(web3, private_key, 4, web3.eth.gasPrice * 5, 6000000)
 
 contract_source_code = open("./test_contract.sol").read()
 abi = compile_source_code(contract_source_code)['abi']
-// a deployed test contract address
+# a deployed test contract address
 contract.instantiate_contract('0xa4ca0f86fbf552be42c38782d248423385e7a115', abi)
 print(contract.send_contract_transaction('setTestValue', [100], 0))
